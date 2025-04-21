@@ -1,0 +1,167 @@
+{
+	"inherit": "Alpha",
+	"variables": [
+	{
+		"Name": "fontFamily",
+		"Value": "Arial, sans-serif"
+	},
+	{
+		"Name": "foreColor",
+		"Value": "#000"
+	},
+	{
+		"Name": "backColor",
+		"Value": "#fff"
+	},
+	{
+		"Name": "iconColor",
+		"Value": "#333"
+	},
+	{
+		"Name": "headerForeColor",
+		"Value": "#fff"
+	},
+	{
+		"Name": "headerBackColor",
+		"Value": "#363636"
+	},
+	{
+		"Name": "panelLineColor",
+		"Value": "rgba(128,128,128,.2)"
+	},
+	{
+		"Name": "accentColor",
+		"Value": "#e8175d"
+	},
+	{
+		"Name": "accentForeColor",
+		"Value": "#fff"
+	},
+	{
+		"Name": "altAccentColor",
+		"Value": "#e8175d"
+	},
+	{
+		"Name": "altAccentForeColor",
+		"Value": "#fff"
+	},
+	{
+		"Name": "errorColor",
+		"Value": "#e81616"
+	},
+	{
+		"Name": "confirmColor",
+		"Value": "#1ae816"
+	},
+	{
+		"Name": "confirmForeColor",
+		"Value": "#fff"
+	},
+	{
+		"Name": "denyColor",
+		"Value": "#e81616"
+	},
+	{
+		"Name": "denyForeColor",
+		"Value": "#fff"
+	},
+	{
+		"Name": "lockColor",
+		"Value": "rgba(0,0,0,.1)"
+	}],
+	"xsass": "$btnShadow:  7px 7px 13px -6px rgba(0, 0, 0, 0.2);  // *AA:Button|Shadow|box-shadow|Style of button shadow\r\n.button, .buttonDD, .buttonSplit { box-shadow: $btnShadow; }",
+	"sass": ".listItem.padding = 0\r\n.listItem.offset = 0",
+	"js": "A5.themes.add('Alpha-Magenta',{listbox: {pcs: {className: 'list',disabledClassName: 'listDisabled',focusClassName: 'list',columnLayout: {header: {className: 'listColHeader',item: {className: 'listColHeaderItem',hoverClassName: 'listColHeaderItem',order: {ascendingImage: 'svgIcon=#alpha-icon-chevronUp:icon',descendingImage: 'svgIcon=#alpha-icon-chevronDown:icon',className: ''},resize: {location: 'after',className: 'listColHeaderItemResize',handle: {className: '',size: '15px'}}}},data: {item: {className: 'listItemData'}}},view: {navigation: {prev: {className: 'listNavButtonPrev',pressedClassName: 'listNavButtonPressed'},next: {className: 'listNavButtonNext',pressedClassName: 'listNavButtonPressed'}}},group: {navigator: {location: 'right',offset: 4,size: 28,className: 'listNav',focusClassName: ''}},header: {className: 'listHeader'},footer: {className: 'listFooter'},lock: {className: ''},content: {header: {className: ''},footer: {className: ''}},item: {className: 'listItem',hoverClassName: 'listItem',selectedClassName: 'listItem',titleClassName: 'listItem',separatorClassName: 'listItem',parts: {mainClassName: 'listItem',subClassName: 'listItem',contextClassName: 'listItem',detailClassName: 'listItem',contentClassName: 'listItem',icons: {navigate: 'svgIcon=#alpha-icon-chevronRight:icon',navigateSubtle: 'svgIcon=#alpha-icon-chevronRight:icon'}}}}}});",
+	"subthemes": {
+		"listbox": {
+			"pcs": {
+				"className": "list",
+				"disabledClassName": "listDisabled",
+				"focusClassName": "list",
+				"columnLayout": {
+					"header": {
+						"className": "listColHeader",
+						"item": {
+							"className": "listColHeaderItem",
+							"hoverClassName": "listColHeaderItem",
+							"order": {
+								"ascendingImage": "svgIcon=#alpha-icon-chevronUp:icon",
+								"descendingImage": "svgIcon=#alpha-icon-chevronDown:icon",
+								"className": ""
+							},
+							"resize": {
+								"location": "after",
+								"className": "listColHeaderItemResize",
+								"handle": {
+									"className": "",
+									"size": "15px"
+								}
+							}
+						}
+					},
+					"data": {
+						"item": {
+							"className": "listItemData"
+						}
+					}
+				},
+				"view": {
+					"navigation": {
+						"prev": {
+							"className": "listNavButtonPrev",
+							"pressedClassName": "listNavButtonPressed"
+						},
+						"next": {
+							"className": "listNavButtonNext",
+							"pressedClassName": "listNavButtonPressed"
+						}
+					}
+				},
+				"group": {
+					"navigator": {
+						"location": "right",
+						"offset": 4,
+						"size": 28,
+						"className": "listNav",
+						"focusClassName": ""
+					}
+				},
+				"header": {
+					"className": "listHeader"
+				},
+				"footer": {
+					"className": "listFooter"
+				},
+				"lock": {
+					"className": ""
+				},
+				"content": {
+					"header": {
+						"className": ""
+					},
+					"footer": {
+						"className": ""
+					}
+				},
+				"item": {
+					"className": "listItem",
+					"hoverClassName": "listItem",
+					"selectedClassName": "listItem",
+					"titleClassName": "listItem",
+					"separatorClassName": "listItem",
+					"parts": {
+						"mainClassName": "listItem",
+						"subClassName": "listItem",
+						"contextClassName": "listItem",
+						"detailClassName": "listItem",
+						"contentClassName": "listItem",
+						"icons": {
+							"navigate": "svgIcon=#alpha-icon-chevronRight:icon",
+							"navigateSubtle": "svgIcon=#alpha-icon-chevronRight:icon"
+						}
+					}
+				}
+			}
+		}
+	}
+}
