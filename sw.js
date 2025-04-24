@@ -1,7 +1,7 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'MobilevisitPWAN4_pwa_cache-v-01.06';
-const dynamicCacheName = 'MobilevisitPWAN4_pwa_dynamic_cache-v-01.06';
+const staticCacheName = 'MobilevisitPWAN4_pwa_cache-v-01.08';
+const dynamicCacheName = 'MobilevisitPWAN4_pwa_dynamic_cache-v-01.08';
 const dynamicCacheSize = 10;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
@@ -123,6 +123,7 @@ var filesToCache = [
 './settings-778.png',
 './shopping.png',
 './skip.png',
+'./wait.gif',
 './index.html',
 
 ];
