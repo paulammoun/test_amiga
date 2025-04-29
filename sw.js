@@ -1,218 +1,93 @@
-// **Template code last revised: 08/30/21
+// **Updated Template - 2025**
 
-const staticCacheName = 'MobilevisitPWAN4_pwa_cache-v-01.18';
-const dynamicCacheName = 'MobilevisitPWAN4_pwa_dynamic_cache-v-01.18';
+const staticCacheName = 'MobilevisitPWAN4_pwa_cache-v-01.20';
+const dynamicCacheName = 'MobilevisitPWAN4_pwa_dynamic_cache-v-01.20';
 const dynamicCacheSize = 10;
-const offlineFilename = './offline.html';
+const offlineFilename = 'offline.html';
 const showDebugInfo = true;
 const usingFirestore = false;
 const usingOneSignalPush = false;
 
-var filesToCache = [
- './css/A5System/default/tree/b.png',
-'./css/A5System/default/tree/bc.png',
-'./css/A5System/default/tree/bcf.png',
-'./css/A5System/default/tree/bcl.png',
-'./css/A5System/default/tree/bo.png',
-'./css/A5System/default/tree/bof.png',
-'./css/A5System/default/tree/bol.png',
-'./css/A5System/default/tree/l.png',
-'./css/A5System/default/tree/lf.png',
-'./css/A5System/default/tree/ll.png',
-'./css/A5System/default/tree/n.png',
-'./css/A5System/default/theme.css',
-'./css/A5System/default/theme.js',
-'./css/A5System/GenericStyles/Default/AccordionTitle.png',
-'./css/A5System/GenericStyles/Default/AccordionTitleHover.png',
-'./css/A5System/GenericStyles/Default/ListHighlight.png',
-'./css/A5System/GenericStyles/Default/ListSelected.png',
-'./css/A5System/GenericStyles/Default/style.css',
-'./css/A5System/GenericStyles/Default/TabbandBackground.png',
-'./css/A5System/GenericStyles/Default/TabBottomSelected.png',
-'./css/A5System/GenericStyles/Default/TabLeftSelected.png',
-'./css/A5System/GenericStyles/Default/TabRightSelected.png',
-'./css/A5System/GenericStyles/Default/TabTopSelected.png',
-'./css/A5System/GenericStyles/Default/WindowButtonGrad.png',
-'./css/A5System/GenericStyles/Default/WindowButtonsGrad.png',
-'./css/A5System/GenericStyles/Default/WindowMainGrad.png',
-'./css/A5System/GenericStyles/Default/WindowTrans.png',
-'./css/A5System/GenericStyles/Default/WindowTransHighlight.png',
-'./css/A5System/GenericStyles/Default/WindowTransHighlightBottom.png',
-'./css/A5System/Images/designModeDropOff.png',
-'./css/A5System/Images/designModeDropOn.png',
-'./css/A5System/Images/designModeIcons.png',
-'./css/A5System/Images/designModeIconsHover.png',
-'./css/A5System/Images/designModeTip.png',
-'./css/A5System/Images/loading.gif',
-'./css/A5System/Images/menuCheck.png',
-'./css/A5System/Images/menuRadio.png',
-'./css/A5System/Images/resizeThumb.gif',
-'./css/A5System/Images/spinner1.gif',
-'./css/A5System/Images/spinner2.gif',
-'./css/A5System/Images/tabclose.png',
-'./css/A5System/Images/tabcloseHover.png',
-'./css/A5System/Images/wait.gif',
-'./css/A5System/reportStyles/Minimal.css',
-'./css/A5System/reportStyles/RoundedBandedBlue.css',
-'./css/A5System/reportStyles/RoundedBandedGray.css',
-'./css/A5System/reportStyles/RoundedBandedOlive.css',
-'./css/A5System/reportStyles/RoundedBandedTan.css',
-'./css/A5System/reportStyles/RoundedBlue.css',
-'./css/A5System/reportStyles/RoundedGray.css',
-'./css/A5System/reportStyles/RoundedOlive.css',
-'./css/A5System/reportStyles/RoundedTan.css',
-'./css/A5System/reportStyles/SquareBanded.css',
-'./css/A5System/reportStyles/SquareBandedBlue.css',
-'./css/A5System/reportStyles/SquareBandedGray.css',
-'./css/A5System/reportStyles/SquareBandedOlive.css',
-'./css/A5System/reportStyles/SquareBandedTan.css',
-'./css/A5System/reportStyles/SquareBlue.css',
-'./css/A5System/reportStyles/SquareGray.css',
-'./css/A5System/reportStyles/SquareOlive.css',
-'./css/A5System/reportStyles/SquareTan.css',
-'./css/A5System/Vista/tree/bc.png',
-'./css/A5System/Vista/tree/bch.png',
-'./css/A5System/Vista/tree/bo.png',
-'./css/A5System/Vista/tree/boh.png',
-'./css/A5System/Vista/tree/n.png',
-'./css/A5System/Vista/theme.css',
-'./css/A5System/Vista/theme.js',
-'./css/Alpha-Magenta/accentEditBorder.png',
-'./css/Alpha-Magenta/accentForeEditBorder.png',
-'./css/Alpha-Magenta/contrastEditBorder.png',
-'./css/Alpha-Magenta/headerEditBorder.png',
-'./css/Alpha-Magenta/spinListBack.png',
-'./css/Alpha-Magenta/style.css',
-'./css/Alpha-Magenta/style.dat',
-'./css/Alpha-Magenta/style.js',
-'./css/Alpha-Magenta/styleInherit.json',
-'./css/_sharedStyles/style.css',
-'./icons/favicon-16x16.png',
-'./icons/favicon-32x32.png',
-'./icons/icon-120.png',
-'./icons/icon-128.png',
-'./icons/icon-144.png',
-'./icons/icon-152.png',
-'./icons/icon-180.png',
-'./icons/icon-192.png',
-'./icons/icon-384.png',
-'./icons/icon-512.png',
-'./icons/icon-72.png',
-'./icons/icon-96.png',
-'./javascript/a5.js',
-'./javascript/A5jQueryWithUI.js',
-'./javascript/a5_url.js',
-'./svg/AASVG.js',
-'./alert.png',
-'./Amiga_logo_pcs_CroppedXS.png',
-'./arrows.png',
-'./clearsearch2.png',
-'./clock.png',
-'./deal.png',
-'./doctor-consultation.png',
-'./hight.png',
-'./JS.js',
-'./low.png',
-'./makevisit.png',
-'./manifest.json',
-'./medium.png',
-'./phoneorder.png',
-'./planning_16759800.png',
-'./rotate.png',
-'./searchicon2.png',
-'./settings-778.png',
-'./shopping.png',
-'./skip.png',
-'./wait.gif',
-'./index.html',
+// Detect base path dynamically
+const BASE_PATH = self.location.pathname.replace(/\/sw\.js$/, '');
 
+// Static files to precache
+const filesToCache = [
+  `${BASE_PATH}/index.html`,
+  `${BASE_PATH}/offline.html`,
+  `${BASE_PATH}/manifest.json`,
+  `${BASE_PATH}/icons/icon-72.png`,
+  `${BASE_PATH}/icons/icon-96.png`,
+  `${BASE_PATH}/icons/icon-120.png`,
+  `${BASE_PATH}/icons/icon-128.png`,
+  `${BASE_PATH}/icons/icon-144.png`,
+  `${BASE_PATH}/icons/icon-152.png`,
+  `${BASE_PATH}/icons/icon-180.png`,
+  `${BASE_PATH}/icons/icon-192.png`,
+  `${BASE_PATH}/icons/icon-384.png`,
+  `${BASE_PATH}/icons/icon-512.png`,
+  // Add here any additional app-specific assets you want cached
 ];
 
-
-// limitCacheSize function
 const limitCacheSize = (name, size) => {
   caches.open(name).then(cache => {
     cache.keys().then(keys => {
-      if(keys.length > size){
+      if (keys.length > size) {
         cache.delete(keys[0]).then(limitCacheSize(name, size));
       }
     });
   });
 };
 
-// install event
-self.addEventListener('install', function(e) {
-  if (showDebugInfo) console.log('** service worker installed.');
-  e.waitUntil(
-    caches.open(staticCacheName).then(function(cache) {
-      if (showDebugInfo) console.log('** service worker caching all assets.');
+// Install event
+self.addEventListener('install', event => {
+  if (showDebugInfo) console.log('** Service Worker installed.');
+  event.waitUntil(
+    caches.open(staticCacheName).then(cache => {
+      if (showDebugInfo) console.log('** Caching all assets.');
       return cache.addAll(filesToCache);
     })
   );
 });
 
-
-// activate event
-self.addEventListener('activate', evt => {
-  if (showDebugInfo) console.log('** service worker activated');
-  evt.waitUntil(
+// Activate event
+self.addEventListener('activate', event => {
+  if (showDebugInfo) console.log('** Service Worker activated.');
+  event.waitUntil(
     caches.keys().then(keys => {
-      return Promise.all(keys
-        .filter(key => key !== staticCacheName && key !== dynamicCacheName)
-        .map(key => caches.delete(key))
+      return Promise.all(
+        keys
+          .filter(key => key !== staticCacheName && key !== dynamicCacheName)
+          .map(key => caches.delete(key))
       );
     })
   );
 });
 
+// Fetch event
+self.addEventListener('fetch', event => {
+  if (showDebugInfo) console.log('** Fetch event', event.request.url);
 
-// fetch event
-self.addEventListener('fetch', evt => {
-  if (showDebugInfo) console.log('** service worker fetch event', evt);
- 
-  /*
-   **  skip the fetch request for certain url's
-   **  chrome:extensions cause errors here
-   **  do not cache results from Firestore
-   **  do not cache OneSignal SDK's or API's
-  */
+  const ignoreRequests = ['chrome-extension', 'firestore.googleapis.com', 'onesignal.com', 'sdks', 'apis'];
   
-  const requests = ['chrome-extension'];
-  if (usingFirestore) {
-  	requests.push('firestore.googleapis.com');
-  }
-  
-  if (usingOneSignalPush) {
-  	requests.push('sdks');
-  	requests.push('apis');	
-  	requests.push('onesignal.com');	
-  }
-  
- const makeRequest = requests.every(request => {
-        return evt.request.url.indexOf(request) === -1;
-  });
+  const isValidRequest = ignoreRequests.every(domain => !event.request.url.includes(domain));
 
-  if (showDebugInfo) console.log('makeRequest = '+makeRequest + " : " + evt.request.url);
-  
-  if (makeRequest) {
-    evt.respondWith(
-      caches.match(evt.request).then(cacheRes => {
-        return cacheRes || fetch(evt.request).then(fetchRes => {
+  if (isValidRequest) {
+    event.respondWith(
+      caches.match(event.request).then(cacheRes => {
+        return cacheRes || fetch(event.request).then(fetchRes => {
           return caches.open(dynamicCacheName).then(cache => {
-            cache.put(evt.request.url, fetchRes.clone());
-            // check cached items size
+            cache.put(event.request.url, fetchRes.clone());
             limitCacheSize(dynamicCacheName, dynamicCacheSize);
             return fetchRes;
-          })
+          });
         });
       }).catch(() => {
-		if ((evt.request.url.indexOf('.html') > -1) || (evt.request.url.indexOf('.a5w') > -1)){
-        	return caches.match(offlineFilename);
-      	}     
+        // Fallback only for navigation requests
+        if (event.request.mode === 'navigate') {
+          return caches.match(`${BASE_PATH}/offline.html`);
+        }
       })
     );
-  }; 
+  }
 });
-
-
-
