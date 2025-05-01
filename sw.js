@@ -1,7 +1,7 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'MobilevisitPWAN4_pwa_cache-v-01.23';
-const dynamicCacheName = 'MobilevisitPWAN4_pwa_dynamic_cache-v-01.23';
+const staticCacheName = 'MobilevisitPWAN4_pwa_cache-v-01.25';
+const dynamicCacheName = 'MobilevisitPWAN4_pwa_dynamic_cache-v-01.25';
 const dynamicCacheSize = 10;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
@@ -106,7 +106,6 @@ var filesToCache = [
 './alert.png',
 './Amiga_logo_pcs_CroppedXS.png',
 './arrows.png',
-'./clearsearch2.png',
 './clock.png',
 './deal.png',
 './doctor-consultation.png',
@@ -119,9 +118,7 @@ var filesToCache = [
 './phoneorder.png',
 './planning_16759800.png',
 './rotate.png',
-'./searchicon2.png',
 './settings-778.png',
-'./shopping.png',
 './skip.png',
 './wait.gif',
 './index.html',
