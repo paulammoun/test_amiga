@@ -1,11 +1,11 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'MobilevisitPWAN4_pwa_cache-v-01.25';
-const dynamicCacheName = 'MobilevisitPWAN4_pwa_dynamic_cache-v-01.25';
+const staticCacheName = 'MobilevisitPWAN4_pwa_cache-v-01.28';
+const dynamicCacheName = 'MobilevisitPWAN4_pwa_dynamic_cache-v-01.28';
 const dynamicCacheSize = 10;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
-const usingFirestore = false;
+const usingFirestore = true;
 const usingOneSignalPush = false;
 
 var filesToCache = [
